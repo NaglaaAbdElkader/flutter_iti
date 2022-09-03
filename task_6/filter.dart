@@ -55,7 +55,7 @@ class _FilterState extends State<Filter> {
                 GridView.builder(
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
-                      childAspectRatio: 2/3
+                      childAspectRatio: 2/2
                   ),
                   itemBuilder: (ctx,index) => Items(movie: list[index]),
                   itemCount: list.length,
