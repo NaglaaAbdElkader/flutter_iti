@@ -4,7 +4,6 @@ import 'dart:convert';
 class Movie {
   int id;
   String title;
-  double? rate;
   String posterPath = "https://image.tmdb.org/t/p/w500/";
   Movie({
     required this.id,
@@ -19,7 +18,6 @@ class Movie {
 class MovieDetails {
   final int id;
   final String title;
-  final double? rate;
   String posterPath = "https://image.tmdb.org/t/p/w500/";
   final String originalLanguage;
   final String overview;
@@ -29,7 +27,6 @@ class MovieDetails {
   MovieDetails({
     required this.id,
     required this.title,
-    required this.rate,
     required String path,
     required this.originalLanguage,
     required this.overview,
@@ -47,7 +44,6 @@ class APICalls {
     MovieDetails list = MovieDetails(
       id: 0,
       title: "",
-      rate: 0,
       path: "",
       originalLanguage: '',
       overview: '',
@@ -66,7 +62,6 @@ class APICalls {
         list = MovieDetails(
           id: data['id'],
           title: data['title'],
-          rate: data['vote_average'],
           path: data['poster_path'],
           originalLanguage: data['original_language'],
           overview: data['overview'],
@@ -114,7 +109,6 @@ class APICalls {
       retutnedList = temp.map((elem) => Movie(
           id: elem['id'],
           title: elem['title'],
-          //rate: elem['vote_average'],
           path: elem['poster_path']
       )).toList();
     } else print("Error");
