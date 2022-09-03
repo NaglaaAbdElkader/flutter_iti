@@ -54,32 +54,36 @@ class _DetailsState extends State<Details> {
   Widget build(BuildContext context) {
     TextStyle a = TextStyle(
       fontWeight: FontWeight.bold,
-      color: Colors.amber,
+      color: Colors.orange,
     );
     TextStyle b = TextStyle(fontWeight: FontWeight.w500, color: Colors.white);
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Filter"),
-      ),
-      body: Column(
-        children: [
-          Image.network(movie.posterPath, fit: BoxFit.cover,),
-          Text("Title:", style: a, textAlign: TextAlign.center,),
-          Text(movie.title, style: b),
-          Text("Popularity:", style: a, textAlign: TextAlign.center,),
-          Text('${movie.popularity}', style: b),
-          Text("Vote Count:", style: a, textAlign: TextAlign.center,),
-          Text('${movie.voteCount}', style: b),
-          Text("Original Language:", style: a, textAlign: TextAlign.center,),
-          Text(movie.originalLanguage, style: b),
-          Text("Release Date:", style: a, textAlign: TextAlign.center,),
-          Text(movie.releaseDate, style: b),
-          SizedBox(height: 100,)
-
+      body: CustomScrollView(
+        slivers: [
+          SliverAppBar(
+            expandedHeight: 400,
+            pinned: true,
+            flexibleSpace: FlexibleSpaceBar(
+              title: Text(movie.title),
+              background: Image.network(movie.posterPath,fit: BoxFit.cover,),
+            ),
+          ),
+          SliverList(delegate: SliverChildListDelegate([
+            Text("Title:", style: a,textAlign: TextAlign.center,),
+            Text(movie.title, style: b),
+            Text("Popularity:", style: a,textAlign: TextAlign.center,),
+            Text('${movie.popularity}', style: b),
+            Text("Vote Count:", style: a,textAlign: TextAlign.center,),
+            Text('${movie.voteCount}', style: b),
+            Text("Original Language:", style: a,textAlign: TextAlign.center,),
+            Text(movie.originalLanguage, style: b),
+            Text("Release Date:", style: a,textAlign: TextAlign.center,),
+            Text(movie.releaseDate, style: b),
+            SizedBox(height: 100,)
+          ]),),
         ],
       ),
-
     );
   }
 }

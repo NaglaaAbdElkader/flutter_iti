@@ -25,7 +25,7 @@ class Items extends StatelessWidget {
                 ClipRRect(
                   child: Image.network(
                     movie.posterPath,
-                    height: 250,
+                    height: 400,
                     width: double.infinity,
                     fit: BoxFit.fill,
                   ),
@@ -34,9 +34,9 @@ class Items extends StatelessWidget {
                 Positioned(
                   bottom: 0,
                   child: Container(
-                      height: 30,
-                      width: 140,
-                      color: Colors.white,
+                      height: 28,
+                      width: 128,
+                      color: Colors.lightBlue,
                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
