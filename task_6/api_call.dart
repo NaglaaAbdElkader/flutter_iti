@@ -8,7 +8,6 @@ class Movie {
   Movie({
     required this.id,
     required this.title,
-    //required this.rate,
     required String path
   }) {
     this.posterPath = "${this.posterPath}$path";
@@ -90,7 +89,6 @@ class APICalls {
       retutnedList = temp.map((elem) => Movie(
           id: elem['id'],
           title: elem['title'],
-          //rate: elem['vote_average'],
           path: elem['poster_path']
       )).toList();
     } else print("Error");

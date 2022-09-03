@@ -21,7 +21,6 @@ class _DetailsState extends State<Details> {
   MovieDetails movie = MovieDetails(
     id: 0,
     title: "",
-    rate: 0,
     path: "",
     originalLanguage: '',
     overview: '',
@@ -71,7 +70,6 @@ class _DetailsState extends State<Details> {
           Text("Popularity:", style: a, textAlign: TextAlign.center,),
           Text('${movie.popularity}', style: b),
           Text("Rate:", style: a, textAlign: TextAlign.center,),
-          Text('${movie.rate}', style: b),
           Text("Vote Count:", style: a, textAlign: TextAlign.center,),
           Text('${movie.voteCount}', style: b),
           Text("Original Language:", style: a, textAlign: TextAlign.center,),
