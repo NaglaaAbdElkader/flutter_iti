@@ -69,7 +69,6 @@ class _DetailsState extends State<Details> {
           Text(movie.title, style: b),
           Text("Popularity:", style: a, textAlign: TextAlign.center,),
           Text('${movie.popularity}', style: b),
-          Text("Rate:", style: a, textAlign: TextAlign.center,),
           Text("Vote Count:", style: a, textAlign: TextAlign.center,),
           Text('${movie.voteCount}', style: b),
           Text("Original Language:", style: a, textAlign: TextAlign.center,),
