@@ -44,8 +44,7 @@ class Items extends StatelessWidget {
                               Icons.favorite,
                               color: Colors.redAccent,
                             ),
-                            Expanded(child: Text(movie.title)),
-                            //Expanded(child: Text('${movie.rate}')),
+                            Expanded(child: Text(movie.title),
                             Icon(
                               Icons.star_rate,
                               color: Colors.blue,
